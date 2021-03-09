@@ -45,7 +45,9 @@ function setup() {
 function draw() {
   background(bgImg);
 
-  
+  if(starBody.position.y > 470){
+	  Matter.Body.setStatic(starBody,true);
+  }
 
   if(keyDown(RIGHT_ARROW)){
 	fairy.x=fairy.x+3
